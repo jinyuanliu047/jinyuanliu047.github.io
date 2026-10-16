@@ -34,3 +34,5 @@ body{font-size:18px;line-height:1.75}.header-inner{min-height:84px}.brand{font-s
 .hero .chinese-name{font-family:'Kaiti SC',STKaiti,KaiTi,'楷体',serif;font-size:.75em;line-height:1.15;letter-spacing:0;font-weight:400}.name-divider{font-size:.62em}.hero h1{align-items:baseline}
 
 @font-face{font-family:'Standard Kai';src:url('/assets/fonts/ChineseName-StandardKai.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}.hero .chinese-name{font-family:'Standard Kai','Kaiti SC',STKaiti,KaiTi,serif;font-size:.75em}
+
+.brand-mark{width:32px;height:32px;background:transparent;border-radius:0;overflow:visible}.brand-mark img{inset:0;width:100%;height:100%;object-fit:contain}:root[data-theme='dark'] .brand-mark img{filter:invert(1)}@media(max-width:540px){.brand-mark{width:28px;height:28px}.brand-mark img{inset:0;width:100%;height:100%}}
