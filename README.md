@@ -17,3 +17,5 @@ Automatic mode computes each day’s sunrise and sunset locally with SunCalc. It
 Libertinus Serif is served from this repository under the SIL Open Font License (`assets/fonts/OFL.txt`). SunCalc is distributed under its BSD license (`assets/vendor/SUNCALC-LICENSE`).
 
 Original public content was migrated from https://sites.google.com/view/jinyuan-liu/ on 2026-10-16. The original Google Site remains available separately. The biography and research interests were updated at the owner’s request.
+
+The Chinese name uses a self-hosted LXGW WenKai TC subset (SIL Open Font License, `assets/fonts/ChineseName-Kai-OFL.txt`).
