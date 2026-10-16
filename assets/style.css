@@ -42,6 +42,7 @@ body{font-size:18px;line-height:1.75}.header-inner{min-height:84px}.brand{font-s
 .brand-mark.original-mark{position:relative;display:block;width:40px;height:40px;overflow:hidden;border-radius:6px;background:#285270}.brand-mark.original-mark img{position:absolute;inset:auto;left:-22px;top:-7px;width:82px;height:54.667px;max-width:none;filter:none}:root[data-theme='dark'] .brand-mark.original-mark img{filter:none}@media(max-width:540px){.brand-mark.original-mark{width:32px;height:32px}.brand-mark.original-mark img{width:66px;height:44px;left:-18px;top:-6px}}
 
 /* Compact, softly translucent navigation. */
+.skip{z-index:30}
 :root{--header-glass:rgba(255,255,255,.86);--header-shadow:rgba(30,48,62,.025)}
 :root[data-theme="dark"]{--header-glass:rgba(20,25,31,.88);--header-shadow:rgba(0,0,0,.12)}
 html{scroll-padding-top:112px}
