@@ -1,0 +1,8 @@
+Font: FandolKai-Regular, Fandol team (Clerk Ma and Jie Su), version 0.3.
+License: GPL with the font exception; see StandardKai-COPYING.
+Upstream distribution: https://ctan.org/pkg/fandol
+Original font: https://mirrors.ctan.org/fonts/fandol/FandolKai-Regular.otf
+
+This website includes a three-character subset (刘锦源) produced with fontTools.subset.
+Reproduce from the original OpenType file:
+  pyftsubset FandolKai-Regular.otf --text=刘锦源 --name-IDs='*' --name-legacy --name-languages='*' --output-file=ChineseName-StandardKai.otf

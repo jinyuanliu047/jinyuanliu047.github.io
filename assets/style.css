@@ -25,6 +25,12 @@ body{font-size:18px;line-height:1.75}.header-inner{min-height:84px}.brand{font-s
 
 .hero h1{display:flex;align-items:baseline;flex-wrap:wrap;gap:12px 23px}.chinese-name{font-family:'Name Kai','Kaiti SC','STKaiti','KaiTi',serif;font-size:33px;font-weight:400;letter-spacing:.08em;color:var(--blue);white-space:nowrap}@media(max-width:760px){.chinese-name{font-size:29px}.hero h1{gap:10px 17px}}@media(max-width:540px){.hero h1{gap:8px 14px}.chinese-name{font-size:25px;letter-spacing:.04em}}
 
-@font-face{font-family:'Name Kai';src:url('/assets/fonts/ChineseName-Kai.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+
 
 :root{--award:#886235;--positive:#3c6a59}:root[data-theme="dark"]{--award:#d6b681;--positive:#a0cdb7}.hero h1{flex-wrap:nowrap;gap:0 13px}.hero .chinese-name{font-size:1em;line-height:1.15;letter-spacing:0;font-weight:400;color:var(--ink)}.name-divider{font-size:.65em;font-weight:400;color:var(--muted);opacity:.55}.paper .award{color:var(--award);font-style:normal}.paper .status-rr{color:var(--positive)}.paper details>summary{color:var(--blue)}.conference-list{margin:10px 0 18px;padding-left:20px;color:var(--muted);font-size:17px;line-height:1.75;max-width:850px}.conference-list li{padding-left:4px;margin-bottom:8px}.conference-list li::marker{color:var(--line)}@media(max-width:760px){.hero h1{font-size:45px;gap:0 9px}.hero .chinese-name{font-size:1em}}@media(max-width:540px){.hero h1{font-size:clamp(27px,8vw,34px);gap:0 7px}.hero .chinese-name{font-size:1em}.conference-list{font-size:16px;padding-left:18px}}
+
+@media(min-width:541px) and (max-width:760px){.hero{grid-template-columns:minmax(0,1fr) 150px;gap:28px}.hero h1{font-size:clamp(30px,5.5vw,40px)}.hero .portrait{width:150px;height:175px}.brand{font-size:21px}.header-inner nav{gap:18px}.header-inner nav a{font-size:16px}.theme-control{padding-left:12px}.theme-control select{font-size:14px}}
+
+.hero .chinese-name{font-family:'Kaiti SC',STKaiti,KaiTi,'楷体',serif;font-size:.75em;line-height:1.15;letter-spacing:0;font-weight:400}.name-divider{font-size:.62em}.hero h1{align-items:baseline}
+
+@font-face{font-family:'Standard Kai';src:url('/assets/fonts/ChineseName-StandardKai.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}.hero .chinese-name{font-family:'Standard Kai','Kaiti SC',STKaiti,KaiTi,serif;font-size:.75em}
