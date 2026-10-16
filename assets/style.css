@@ -40,3 +40,14 @@ body{font-size:18px;line-height:1.75}.header-inner{min-height:84px}.brand{font-s
 .brand-mark.letter-mark{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:6px;background:#e8eef2;color:#2b4a61;font:600 17px/1 -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;letter-spacing:-.03em}:root[data-theme='dark'] .brand-mark.letter-mark{background:#2a3b48;color:#e5edf3}@media(max-width:540px){.brand-mark.letter-mark{width:28px;height:28px;font-size:15px}}
 
 .brand-mark.original-mark{position:relative;display:block;width:40px;height:40px;overflow:hidden;border-radius:6px;background:#285270}.brand-mark.original-mark img{position:absolute;inset:auto;left:-22px;top:-7px;width:82px;height:54.667px;max-width:none;filter:none}:root[data-theme='dark'] .brand-mark.original-mark img{filter:none}@media(max-width:540px){.brand-mark.original-mark{width:32px;height:32px}.brand-mark.original-mark img{width:66px;height:44px;left:-18px;top:-6px}}
+
+/* Compact, softly translucent navigation. */
+:root{--header-glass:rgba(255,255,255,.86);--header-shadow:rgba(30,48,62,.025)}
+:root[data-theme="dark"]{--header-glass:rgba(20,25,31,.88);--header-shadow:rgba(0,0,0,.12)}
+html{scroll-padding-top:112px}
+.site-header{position:sticky;top:0;z-index:20;background:var(--paper);box-shadow:0 2px 12px var(--header-shadow)}
+@supports ((backdrop-filter:blur(16px)) or (-webkit-backdrop-filter:blur(16px))){.site-header{background:var(--header-glass);-webkit-backdrop-filter:blur(16px) saturate(115%);backdrop-filter:blur(16px) saturate(115%)}}
+.header-inner{min-height:76px}.brand{font-size:22px;gap:11px}.theme-control select{background:transparent}.theme-control option{background:var(--paper);color:var(--ink)}
+.brand-mark.original-mark{width:32px;height:32px;border-radius:5px}.brand-mark.original-mark img{width:65.6px;height:43.733px;left:-17.6px;top:-5.6px}
+@media(max-width:540px){html{scroll-padding-top:132px}.header-inner{min-height:72px;padding:10px 0 8px}.header-inner nav{margin-top:4px}.brand{font-size:20px;gap:9px}.brand-mark.original-mark{width:28px;height:28px}.brand-mark.original-mark img{width:57.4px;height:38.267px;left:-15.4px;top:-4.9px}}
+@media(prefers-reduced-transparency:reduce){.site-header{background:var(--paper);-webkit-backdrop-filter:none;backdrop-filter:none}}
