@@ -4,7 +4,7 @@ A buildless academic website for GitHub Pages. No npm packages or build step are
 
 ## Edit
 
-- `index.html`: biography, research statement, education, contact.
+- `index.html`: biography, research interests, education, contact.
 - `research/index.html`: working papers and work in progress.
 - `assets/style.css`: design and responsive light/dark themes.
 - `assets/theme.js`: theme selection, saved manual preference, and automatic sunrise/sunset switching for Beijing (39.9042° N, 116.4074° E).
