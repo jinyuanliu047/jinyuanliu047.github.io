@@ -77,3 +77,37 @@ main.wrap{padding-top:30px;padding-bottom:26px}
  .wip{padding:14px 0 24px}.wip article{padding:22px;margin-bottom:16px}.research-page .research-contact{padding:20px;font-size:15px}
 }
 @media(prefers-reduced-transparency:reduce){.site-header,.hero,.section,.research-page .page-heading,.research-page .paper,.wip article,.research-page .research-contact{background:var(--glass-solid);-webkit-backdrop-filter:none;backdrop-filter:none}}
+
+/* More expressive liquid-glass edges, with clear typography. */
+:root{--canvas:#eef3f9;--glass:rgba(255,255,255,.48);--glass-solid:#f7fafd;--glass-edge:rgba(255,255,255,.91);--glass-line:rgba(98,124,151,.18);--glass-shadow:inset 0 1px 1px rgba(255,255,255,.96),inset 0 -1px 1px rgba(134,159,184,.09),0 12px 36px rgba(54,83,113,.075),0 2px 5px rgba(54,83,113,.025)}
+:root[data-theme="dark"]{--canvas:#101722;--glass:rgba(38,49,67,.55);--glass-solid:#1c2736;--glass-edge:rgba(215,231,253,.2);--glass-line:rgba(185,211,244,.17);--glass-shadow:inset 0 1px 1px rgba(224,237,255,.16),inset 0 -1px 1px rgba(0,0,0,.15),0 14px 42px rgba(0,0,0,.18)}
+body::before{background:radial-gradient(ellipse at 0% 5%,rgba(124,178,229,.35),transparent 52%),radial-gradient(ellipse at 100% 32%,rgba(188,170,222,.31),transparent 48%),radial-gradient(ellipse at 28% 92%,rgba(143,197,209,.24),transparent 48%)}
+:root[data-theme="dark"] body::before{background:radial-gradient(ellipse at 0% 5%,rgba(59,116,183,.32),transparent 52%),radial-gradient(ellipse at 100% 32%,rgba(119,91,170,.26),transparent 48%),radial-gradient(ellipse at 28% 92%,rgba(48,121,137,.2),transparent 48%)}
+.site-header{overflow:hidden;isolation:isolate;width:min(1096px,calc(100% - 48px));margin:14px auto 0;top:12px;border:1px solid var(--glass-edge);border-radius:999px;background:var(--glass-solid);box-shadow:var(--glass-shadow)}
+.site-header .header-inner{width:100%;height:72px;min-height:72px;padding:0 25px;gap:24px}
+.site-header nav a{padding:8px 16px;transition:background .18s,box-shadow .18s}
+.site-header nav a[aria-current="page"]{box-shadow:inset 0 1px 1px rgba(255,255,255,.9),0 3px 9px rgba(56,85,111,.06)}
+.hero,.section,.research-page .page-heading,.research-page .paper,.wip article,.research-page .research-contact{border-radius:29px;background:var(--glass-solid);box-shadow:var(--glass-shadow)}
+@supports ((backdrop-filter:blur(24px)) or (-webkit-backdrop-filter:blur(24px))){
+ .site-header{background:linear-gradient(140deg,rgba(255,255,255,.35),rgba(255,255,255,0) 55%),var(--glass);-webkit-backdrop-filter:blur(28px) saturate(145%);backdrop-filter:blur(28px) saturate(145%)}
+ .hero,.section,.research-page .page-heading,.research-page .paper,.wip article,.research-page .research-contact{background:linear-gradient(145deg,rgba(255,255,255,.33),rgba(255,255,255,0) 58%),var(--glass);-webkit-backdrop-filter:blur(24px) saturate(130%);backdrop-filter:blur(24px) saturate(130%)}
+ :root[data-theme="dark"] .site-header,:root[data-theme="dark"] .hero,:root[data-theme="dark"] .section,:root[data-theme="dark"] .research-page .page-heading,:root[data-theme="dark"] .research-page .paper,:root[data-theme="dark"] .wip article,:root[data-theme="dark"] .research-page .research-contact{background:linear-gradient(145deg,rgba(205,225,255,.07),rgba(205,225,255,0) 58%),var(--glass)}
+}
+.profile-links a,.statement-link,.research-jumps a{border-color:var(--glass-edge);background:linear-gradient(145deg,rgba(255,255,255,.48),rgba(255,255,255,.08)),var(--glass);box-shadow:inset 0 1px 1px rgba(255,255,255,.75),0 3px 9px rgba(60,91,122,.045);transition:background .18s,box-shadow .18s,transform .18s}
+:root[data-theme="dark"] .profile-links a,:root[data-theme="dark"] .statement-link,:root[data-theme="dark"] .research-jumps a{background:linear-gradient(145deg,rgba(210,230,255,.08),transparent),var(--glass);box-shadow:inset 0 1px 1px rgba(220,235,255,.12),0 3px 9px rgba(0,0,0,.08)}
+.profile-links a:active,.statement-link:active,.research-jumps a:active{transform:scale(.97)}
+.hero .portrait{border-radius:21px}
+@media(max-width:760px){.site-header{width:calc(100% - 32px)}.site-header .header-inner{padding:0 18px;gap:14px}.site-header nav a{padding:7px 11px}}
+@media(max-width:540px){
+ .site-header{width:calc(100% - 24px);margin-top:10px;top:8px;border-radius:28px}.site-header .header-inner{height:100px;min-height:100px;padding:11px 16px 9px;gap:0 10px}.site-header nav{margin-top:6px}.site-header nav a{padding:5px 14px}
+ main.wrap{padding-top:18px}.hero,.section,.research-page .page-heading,.research-page .paper,.wip article,.research-page .research-contact{border-radius:26px}
+ .hero{display:flex;flex-direction:column;align-items:center;gap:0;padding:27px 20px 25px;text-align:center}.hero-copy{display:contents}
+ .hero .portrait-block{order:0;margin:0 0 21px}.hero .portrait{width:104px;height:122px;border-radius:22px}
+ .hero h1{order:1;display:flex;justify-content:center;align-items:baseline;font-size:clamp(28px,8vw,36px);gap:0 6px;line-height:1.22;margin:0 0 17px;white-space:nowrap}.hero .chinese-name{font-size:.73em}.hero .name-divider{font-size:.6em}
+ .hero .affiliation{order:2;grid-column:auto;font-size:16px;line-height:1.65;margin:0;max-width:330px}
+ .hero .profile-links{order:3;display:flex;justify-content:center;gap:8px;margin:20px 0 0;flex-wrap:wrap;font-size:15px}.profile-links a{padding:5px 11px}
+ .section h2{font-size:26px}.statement-copy .statement-primary{font-size:18px;line-height:1.75}.statement-copy .research-statement:not(.statement-primary){font-size:17px;line-height:1.75}.statement-link{font-size:15px}
+ .research-page .page-heading h1{font-size:40px}.research-page .research-section>h2,.research-page .wip>h2{font-size:26px}.research-page .paper h3,.wip h3{font-size:23px;line-height:1.4}
+}
+@media(prefers-reduced-motion:reduce){.profile-links a,.statement-link,.research-jumps a,.site-header nav a{transition:none;transform:none}}
+@media(prefers-reduced-transparency:reduce){.site-header,.hero,.section,.research-page .page-heading,.research-page .paper,.wip article,.research-page .research-contact{background:var(--glass-solid)!important;-webkit-backdrop-filter:none;backdrop-filter:none}}
