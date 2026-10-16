@@ -111,3 +111,5 @@ body::before{background:radial-gradient(ellipse at 0% 5%,rgba(124,178,229,.35),t
 }
 @media(prefers-reduced-motion:reduce){.profile-links a,.statement-link,.research-jumps a,.site-header nav a{transition:none;transform:none}}
 @media(prefers-reduced-transparency:reduce){.site-header,.hero,.section,.research-page .page-heading,.research-page .paper,.wip article,.research-page .research-contact{background:var(--glass-solid)!important;-webkit-backdrop-filter:none;backdrop-filter:none}}
+
+.site-footer{border-top:0}
